@@ -7,11 +7,11 @@
 <script>
 $(document).ready(function(){
 var hurrah=$.getJSON("app.js", function(items){parser(items);alert('lil');});
-alert(hurrah);
+
 
 function parser(data){
 
- var jdata=$.parseJSON(data);alert(jdata.windw.title);
+
  $("<div class='window'>"+jdata.windw.title+"<div>").appendTo('body');
 	
 }
