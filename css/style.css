@@ -1,0 +1,72 @@
+body
+{
+	margin:0px;
+//	background-image:url('../img/myCloud.png');
+
+	
+}
+#myCanvas{
+position:fixed;
+top:0px;
+z-index:-1;	
+//width:100%;
+//height:100%;
+//background-image:url('../img/myCloud.png');
+opacity:0.9;
+}
+#menubar_bottom{
+height:20px;
+width:100%;
+position:fixed;
+bottom:0;
+z-index:4;
+background:#ED4700;
+//border-radius:5 25 0 0;
+color:white;
+font-size:18px;
+border-bottom:0;	
+text-align:center;
+//margin:70px;
+margin-bottom:0px;
+cursor:pointer;
+box-shadow:0 0 10px #3c3c3c ;
+}
+#akr{
+position:absolute;
+overflow:none;
+height:80%;
+margin:15px;	
+}
+#rightMenu{
+position:absolute;
+//width:5%;
+//height:15%;
+background:#3c3c3c;
+color:#f5f5f5;
+padding:5px;
+border-radius:5px 5px 5px 5px;
+}
+#rightMenu  a{
+text-decoration:none;color:#f6f6f6;
+border-top:1px solid white;
+border-bottom:1px solid white;
+}
+.iconScreen{padding:5px;width:150px;height:150px;position:absolute;margin:10px;background:white;margin-bottom:20;color:#4790ee;font-size:12px;box-shadow:0 0 10px #3c3c3c}
+.iconScreen:hover
+{background:#f1f1f1;box-shadow:0 0 20px #ED4700}
+.iconImg{
+width:150px;height:110px;
+}
+.iconImg img{width:145px;height:100px;	}
+.iconText{
+width:100%;height:30px;text-align:center;font-size:24px;vertical-align:center;padding:5px;font-family:'Tahoma';margin:5px;color:#3c3c3c;
+}
+
+ #alertRaise{position:absolute;top:100;left:100}
+ #widgetScreen{position:fixed;z-index:10;width:500px;height:100%;right:-500;top:0;border:1px solid #ED4732;}
+ #opacityWidget{width:100%;height:100%;background:#f6f6f6;opacity:0.4;position:absolute;z-index:2}
+ #widgetContent{width:100%;height:100%;opacity:1;position:absolute;z-index:3}
+ #appGround{position:absolute;z-index:1;font-size:36;color:white}
+ 
+ 
+ 

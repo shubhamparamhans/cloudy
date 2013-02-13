@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>img{ height: 100px; float: left; }</style>
+  <script src="jquery.js"></script>
+  <script>
+$(document).ready(function(){
+$.getJSON("jsn.php",
+ 
+  function(items) {
+    for(var i=0;i<items.data.length;i++){
+				$('#jk').append	("<div id='"+items.data[i].id+"'>"+items.data[i].text+"</div>");
+	}
+	
+});
+});
+  </script>
+</head>
+<body>
+  <div id="jk">
+			
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>CLOUD</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.23.custom.css" rel="Stylesheet" />
+<style>
+body
+{margin:0px;		}
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script>
+ $(document).ready(function() {
+		var itm;
+       $('#akr').load('jsn.txt',function(items,textStatus,XMLHttpRequest){
+	   alert(items);
+	   items=$.parseJSON(items);
+	   var jsc="";
+	   wmx=200;
+	   hmx=200;
+	   hi=0;
+	   wi=0;
+	   $('#ns').append(items.data.length);
+		for(i=0;i<items.data.length;i++){
+						if(wi*wmx<$(window).get(0).innerWidth-200){
+					$('#akr').append("<div id='"+items.data[i].id+"' class='iconScreen' style='top:"+hmx*hi+";left:"+wmx*wi+"' ><span class='iconImg'><img src='"+items.data[i].img+"'/></span><br><br>	<span class='iconText'>"+items.data[i].text+"</span></div>");
+						wi++;
+						}
+						else{
+						hi++;
+						wi=0;
+						$('#akr').append("<div id='"+items.data[i].id+"' class='iconScreen' style='top:"+hmx*hi+";left:"+wmx*wi+"' ><span class='iconImg'><img src='"+items.data[i].img+"'/></span><br><br>	<span class='iconText'>"+items.data[i].text+"</span></div>");
+						wi++;
+						}
+					//$('#'+items.data[i].id).append("<img src='"+items.data[i].img+"'/>");
+					$('#'+items.data[i].id).draggable();
+					ct=$('#'+items.data[i].id).position();
+					
+					x1=items.data[i].dblclk;
+					x2=items.data[i].id;
+					jsc+="$('#"+x2+"').dblclick(function(){"+x1+";});";
+					
+					
+		}
+		eval(jsc);
+		hti=$('#akr').height();
+		$('#akr').height(hti+100);
+		
+	   });
+ });
+ </script>
+</head>
+<body>
+
+<canvas id="myCanvas"></canvas>
+<center>
+<div id="menubar_bottom">
+<span id="widgetOn" class="ui-icon ui-icon-power"></span>
+</div>
+</center>
+<div id="akr">
+<!--<div id="alertRaise" class="iconScreen"><span class="ui-icon ui-icon-power"></span>I AM DRAGGABLE...<br>YOU CAN ALSO DOUBLE CLICK ME!!!</div>-->
+</div>
+
+<div id="rightMenu">
+<div><a href="" id="refreshWindow">REFRESH</a></div></div>
+<div id="widgetScreen">
+<div id="opacityWidget" style=""></div>
+<div id="widgetContent"><input id="speech-text" type="text" x-webkit-speech></div>
+
+</div>
+
+	 <div id="appGround"><div>
+	 
+</body>
+<script type="text/javascript">
+	/*	$(document).ready(function(){
+		
+		g=$(window).get(0).innerWidth;
+		
+			$('.iconScreen').click(function(){
+			alert("perry");								
+							});			
+			
+				});*/
+
+</script>
+</html>

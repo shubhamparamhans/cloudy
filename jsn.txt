@@ -1,0 +1,1 @@
+{"appname":"newAPP","data":[{"id":"e_1","dblclk":"$('#calc').detach();$.getScript('.\/JSAPP\/dev\/calc.js',function(data,testStatus,jqxhr){\t});","text":"Say Perry","img":"img\/bg\/1.jpg"},{"id":"e_2","dblclk":"","text":"Say Perry","img":""},{"id":"e_2","dblclk":"","text":"Say Perry","img":""}],"app":[]}
