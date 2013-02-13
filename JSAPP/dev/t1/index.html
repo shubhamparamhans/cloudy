@@ -6,13 +6,14 @@
 <script src="jquery.js"></script>
 <script>
 $(document).ready(function(){
-var hurrah=$.getJSON("app.js", function(items){parser(items);alert('lil');});
-
+$.getJSON("app.js", function(items){parser(items);alert('lil');});
 
 function parser(data){
 
-
- $("<div class='window'>"+jdata.windw.title+"<div>").appendTo('body');
+ //var jdata=$.parseJSON(data);alert(jdata.windw.title);
+ $("<div class='window'>"+data.windw.title+"<div>").appendTo('body');
+ $(".window").css({"width":data.windw.w,"height":data.windw.h,"background":data.windw});
+ 
 	
 }
 
